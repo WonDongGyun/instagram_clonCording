@@ -8,7 +8,6 @@ module.exports = {
 
     async selectBoard() {
         const boardAll = await board.find();
-        console.log(boardAll);
         return boardAll;
     },
 };
