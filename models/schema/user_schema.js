@@ -1,33 +1,29 @@
 const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
-const boardSchema = new Schema({
-    boardId: {
+const userSchema = new Schema({
+    userId: {
         type: mongoose.Schema.Types.ObjectId,
         unique: true,
         index: true,
         auto: true,
         required: true,
     },
-    userId: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'user',
-        required: true,
-    },
-    contents: {
+    email: {
         type: String,
         required: true,
     },
-    img: {
+    nickName: {
         type: String,
         required: true,
     },
-    tag: {
+    userName: {
         type: String,
+        required: true,
     },
-    like: {
-        type: Number,
-        default: 0,
+    password: {
+        type: String,
+        required: true,
     },
     day: {
         type: Date,
@@ -36,4 +32,4 @@ const boardSchema = new Schema({
     },
 });
 
-module.exports = mongoose.model('board', boardSchema);
+module.exports = mongoose.model('user', userSchema);

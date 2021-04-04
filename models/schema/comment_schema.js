@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
-const boardSchema = new Schema({
-    boardId: {
+const commentSchema = new Schema({
+    comment: {
         type: mongoose.Schema.Types.ObjectId,
         unique: true,
         index: true,
@@ -14,16 +14,14 @@ const boardSchema = new Schema({
         ref: 'user',
         required: true,
     },
-    contents: {
-        type: String,
+    boardId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'board',
         required: true,
     },
-    img: {
+    comment: {
         type: String,
         required: true,
-    },
-    tag: {
-        type: String,
     },
     like: {
         type: Number,
@@ -36,4 +34,4 @@ const boardSchema = new Schema({
     },
 });
 
-module.exports = mongoose.model('board', boardSchema);
+module.exports = mongoose.model('comment', commentSchema);

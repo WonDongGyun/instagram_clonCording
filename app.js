@@ -6,7 +6,7 @@ const port = 3001;
 const connect = require('./models/connectDB');
 connect();
 
-// ors 설정
+// cors 설정
 const cors = require('cors');
 const corsOptions = {
     origin: 'http://localhost:3000',
