@@ -25,6 +25,9 @@ const userSchema = new Schema({
         type: String,
         required: true,
     },
+    profile_img: {
+        type: String,
+    },
     day: {
         type: Date,
         default: Date.now,
