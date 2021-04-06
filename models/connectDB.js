@@ -7,6 +7,8 @@ const connect = () => {
             useUnifiedTopology: true,
             useCreateIndex: true,
             ignoreUndefined: true,
+            //user: 'insta',
+            //pass: 'insta',
         })
         .catch((err) => console.log(err));
 };

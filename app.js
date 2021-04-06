@@ -28,6 +28,9 @@ app.use('/insta/login', instaLoginRouter);
 const instaProfileRouter = require('./controller/profile_controller/profile_controller');
 app.use('/insta/profile', instaProfileRouter);
 
+const instaRegisterRouter = require('./controller/register_controller/register_controller');
+app.use('/insta/register', instaRegisterRouter);
+
 app.get('/', (req, res) => {
     res.send('Hello World');
 });
