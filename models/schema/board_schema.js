@@ -22,9 +22,6 @@ const boardSchema = new Schema({
         type: String,
         required: true,
     },
-    tag: {
-        type: String,
-    },
     like: {
         type: Number,
         default: 0,

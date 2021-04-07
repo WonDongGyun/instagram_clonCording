@@ -9,7 +9,7 @@ connect();
 // cors 설정
 const cors = require('cors');
 const corsOptions = {
-    origin: 'http://localhost:3000',
+    origin: '*',
     credentials: true,
 };
 
@@ -29,6 +29,9 @@ app.use('/insta/profile', instaProfileRouter);
 
 const instaRegisterRouter = require('./controller/register_controller/register_controller');
 app.use('/insta/register', instaRegisterRouter);
+
+const instaBoardRouter = require('./controller/board_controller/board_controller');
+app.use('/insta/board', instaBoardRouter);
 
 app.get('/', (req, res) => {
     res.send('Hello World');

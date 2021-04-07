@@ -4,7 +4,7 @@ const user = require('../../models/schema/user_schema');
 module.exports = (req, res, next) => {
     try {
         const { authorization } = req.body;
-        const { tokenType, tokenValue } = authorization.split(' ');
+        const [tokenType, tokenValue] = authorization.split(' ');
 
         if (tokenType != 'Bearer') {
             return res.status(400).send({
