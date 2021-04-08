@@ -91,53 +91,57 @@ use  node js, mongoose and React
 <br/>
 
 ```bash
-node-notice_board_project2
+instagram_clonCording
 ├─ node_modules
 │  
 ├─ .vscode
 │  
-├─ authentication
-│  └─ auth_login.js
+├─ middleWare
+│  └─ verifiacation
+│     └─ verify_middleWare.js
 │  
-├─ config
-│  └─ config.json
-│  
-├─ migrations
-│  └─ create-account.js
-│  └─ create-board.js
-│  └─ create-comment.js
 │  
 ├─ models
-│  └─ account.js
-│  └─ board.js
-│  └─ comment.js
-│  └─ index.js
-│  
-├─ views
-│  ├─ account
-│  │  └─ account.js
-│  │  └─ account.spec.js
-│  │  └─ login.ejs
-│  │  └─ signUp.ejs
+│  ├─ schema
+│  │  └─ board_schema.js
+│  │  └─ comment_schema.js
+│  │  └─ like_schema.js
+│  │  └─ user_schema.js
 │  │
-│  ├─ basicBoard
-│  │  └─ basicBoard.js
-│  │  └─ basicBoard.ejs
-│  │  └─ readBoard.ejs
-│  │  └─ updateBoard.ejs
-│  │  └─ writeBoard.ejs
+│  └─ connectDB.js
+│  
+├─ controller
+│  ├─ board_controller
+│  │  ├─ board_service
+│  │  │  └─ board_service.js
+│  │  └─ board_controller.js
 │  │
-│  ├─ include
-│  │  └─ header.ejs
-│  │  └─ footer.ejs
-│  │  └─ modal.ejs
+│  ├─ login_controller
+│  │  ├─ login_service
+│  │  │  └─ login_service.js
+│  │  └─ login_controller.js
+│  │
+│  ├─ main_controller
+│  │  ├─ main_service
+│  │  │  └─ main_service.js
+│  │  └─ main_controller.js
+│  │
+│  ├─ profile_controller
+│  │  ├─ profile_service
+│  │  │  └─ profile_service.js
+│  │  └─ profile_controller.js
+│  │
+│  └─ register_controller
+│     ├─ register_service
+│     │  └─ register_service.js
+│     └─ register_controller.js
 │  
-├─ seeders
-│  
-│  
-└─ main.js
+└─ app.js
 └─ package-lock.json
 └─ package.json
+└─ awsconfig.json
+└─ .prettierrc.json
+└─ .eslintrc.json
 ```
 
 <br/>
