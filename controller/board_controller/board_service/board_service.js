@@ -10,6 +10,7 @@ module.exports = {
         });
     },
 
+    // 좋아요 및 싫어요 기능. $inc를 사용하면 몽고DB에서 간단한 +- 연산이 가능하다.
     async likeBoard(userId, boardId) {
         return like.findOne({ userId, boardId }).then(async (findLike) => {
             if (findLike) {

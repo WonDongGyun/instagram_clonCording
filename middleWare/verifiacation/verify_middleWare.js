@@ -1,6 +1,7 @@
 const jwt = require('jsonwebtoken');
 const user = require('../../models/schema/user_schema');
 
+// jwt 인증 미들웨어
 module.exports = (req, res, next) => {
     try {
         let authorization = req.get('authorization');

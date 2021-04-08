@@ -14,7 +14,7 @@ AWS.config.loadFromPath(awsLoadPath);
 // s3 객체생성
 let s3 = new AWS.S3();
 
-// multer 업로드
+// multer 업로드. 버켓 이름과 aws 키값 정보만 입력되어 있다면 업로드 가능
 const uploadSingle = multer({
     storage: multerS3({
         s3: s3,
@@ -53,6 +53,7 @@ router.post(
     },
 );
 
+// 좋아요 및 싫어요 기능
 router.post('/like', verifyRouter, async (req, res) => {
     const userId = res.locals._id;
     const { boardId } = req.body;

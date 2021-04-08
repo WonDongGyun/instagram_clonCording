@@ -6,6 +6,7 @@ module.exports = {
         return boardAll;
     },
 
+    // 현재 로그인한 사용자의 좋아요 및 싫어요 상태 보여주기
     async findLikeYn(userId) {
         const likeAll = await like.find({ userId }).populate({
             path: 'boardId',

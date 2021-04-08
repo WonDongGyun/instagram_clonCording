@@ -14,6 +14,7 @@ router.post('/', async (req, res) => {
             });
         }
 
+        // bcrypt로 암호화된 비밀번호와 입력된 비밀번호 비교하기
         bcrypt.compare(password, findUser.password).then((match) => {
             if (!match) {
                 return res.status(400).send({

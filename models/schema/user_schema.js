@@ -52,7 +52,9 @@ userSchema.pre('save', function (next) {
             if (err) {
                 return next(err);
             }
-            user.password = hash; // Hash값 pwd에 저장
+
+            // Hash값 pwd에 저장
+            user.password = hash;
             next();
         });
     });

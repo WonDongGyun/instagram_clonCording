@@ -4,6 +4,7 @@ const registerService = require('./register_service/register_service');
 
 // 회원가입
 router.post('/', async (req, res) => {
+    // 이메일 및 비밀번호 정규식
     const email_regExp = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
     const password_regExp = /^(?=.*\d)(?=.*[a-zA-Z])[0-9a-zA-Z]{8,12}$/;
     const { email, nickName, userName, password, passwordChk } = req.body;
