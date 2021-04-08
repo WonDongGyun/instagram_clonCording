@@ -1,6 +1,6 @@
 # instagram_clonCording  
 트리스티의 Node js + mongoose + React를 사용한 Instagram Clone Cording Project  
-[**[트리스티의 Node js + mongoose + React를 사용한 Instagram Clone Cording 프로젝트에 오신 여러분을 환영합니다!]**](https://tristy.tistory.com/)  
+[**[트리스티의 Node js + mongoose + React를 사용한 Clone Cording 프로젝트에 오신 여러분을 환영합니다!]**](https://tristy.tistory.com/)  
 
 <br/>
 <br/>
@@ -23,12 +23,15 @@ use  node js, mongoose and React
 🤔 프로젝트 개요
 -------------  
 <ul style="list-style-type: disc;" data-ke-list-type="disc">
-<li><b>진행 날짜 - 2021.03.01 ~ 2021.03.04</b></li>
-<li><b>목적 - 처음으로 배정된 팀원들과, 사전과제에서 공부한 지식을 바탕으로 프로젝트를 완성하기</b></li>
+<li><b>진행 날짜 - 2021.04.02 ~ 2021.04.08</b></li>
+<li><b>목적 - 팀원들과 함께, 백엔드와 프론트 엔드의 역할을 맡아 클론 코딩을 해보자!!!</b></li>
 <li><b>필수 포함 사항</b></li>
 </ul>
 
-<p align="center"><img src="https://user-images.githubusercontent.com/52685665/113508669-41fd2000-958c-11eb-962d-49f42bc8a971.png"></p>
+<br/>
+<br/>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/52685665/114043193-07afbd80-98c1-11eb-8076-054678406013.png"></p>
 
 <br/>
 <br/>
