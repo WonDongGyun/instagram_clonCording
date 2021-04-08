@@ -5,7 +5,7 @@ const AWS = require('aws-sdk');
 const router = express.Router();
 const path = require('path');
 const boardService = require('./board_service/board_service');
-const verifyMWRouter = require('../../middleWare/verifiacation/verify_middleWare');
+const verifyRouter = require('../../middleWare/verifiacation/verify_middleWare');
 
 // amazon LoadPath 설정
 const awsLoadPath = path.join(__dirname, '../../awsconfig.json');
@@ -30,13 +30,13 @@ const uploadSingle = multer({
 
 router.post(
     '/',
+    verifyRouter,
     uploadSingle.single('boardImg'),
-    verifyMWRouter,
     async (req, res) => {
         try {
             const { contents } = req.body;
             const img = req.file.location;
-            const userId = res.locals.userId;
+            const userId = res.locals._id;
 
             boardService.createBoard(userId, contents, img).then(() => {
                 return res.status(200).send({
@@ -44,17 +44,6 @@ router.post(
                     messsage: '글이 작성되었습니다.',
                 });
             });
-
-            // var obj = {
-            //     name: req.body.name,
-            //     desc: req.body.desc,
-            //     img: {
-            //         data: fs.readFileSync(
-            //             path.join(__dirname + '/uploads/' + req.file.filename),
-            //         ),
-            //         contentType: 'image/png',
-            //     },
-            // };
         } catch {
             return res.status(400).send({
                 result: 'fail',
@@ -63,5 +52,17 @@ router.post(
         }
     },
 );
+
+router.post('/like', verifyRouter, async (req, res) => {
+    const userId = res.locals._id;
+    const { boardId } = req.body;
+
+    boardService.likeBoard(userId, boardId).then((message) => {
+        return res.status(200).send({
+            result: 'success',
+            message: message,
+        });
+    });
+});
 
 module.exports = router;

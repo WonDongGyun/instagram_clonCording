@@ -3,7 +3,7 @@ const user = require('../../models/schema/user_schema');
 
 module.exports = (req, res, next) => {
     try {
-        const { authorization } = req.body;
+        let authorization = req.get('authorization');
         const [tokenType, tokenValue] = authorization.split(' ');
 
         if (tokenType != 'Bearer') {
@@ -13,13 +13,13 @@ module.exports = (req, res, next) => {
             });
         }
 
-        const { userId, email, nickName, userName } = jwt.verify(
+        const { _id, email, nickName, userName } = jwt.verify(
             tokenValue,
             'threeKey',
         );
 
-        user.findOne({ userId }).then((findUserId) => {
-            res.locals.userId = findUserId.userId;
+        user.findOne({ _id }).then((findUserId) => {
+            res.locals._id = findUserId._id;
             res.locals.email = findUserId.email;
             res.locals.nickName = findUserId.nickName;
             res.locals.userName = findUserId.userName;

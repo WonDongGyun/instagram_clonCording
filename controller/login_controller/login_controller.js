@@ -6,7 +6,6 @@ const loginService = require('./login_service/login_service');
 
 router.post('/', async (req, res) => {
     const { email, password } = req.body;
-
     loginService.findUser(email).then((findUser) => {
         if (!findUser) {
             return res.status(400).send({
@@ -24,7 +23,7 @@ router.post('/', async (req, res) => {
             } else {
                 const token = jwt.sign(
                     {
-                        userId: findUser.userID,
+                        _id: findUser._id,
                         email: findUser.email,
                         nickName: findUser.nickName,
                         userName: findUser.userName,

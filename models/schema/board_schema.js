@@ -2,13 +2,6 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 const boardSchema = new Schema({
-    boardId: {
-        type: mongoose.Schema.Types.ObjectId,
-        unique: true,
-        index: true,
-        auto: true,
-        required: true,
-    },
     userId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'user',

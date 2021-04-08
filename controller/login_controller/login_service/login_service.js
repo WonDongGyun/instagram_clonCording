@@ -5,9 +5,4 @@ module.exports = {
         const findUser = await user.findOne({ email });
         return findUser;
     },
-
-    async findUserId(userId) {
-        const findUserId = await user.findOne({ userId });
-        return findUserId;
-    },
 };

@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const port = 3001;
+const verifyRouter = require('./middleWare/verifiacation/verify_middleWare');
 
 // 몽고DB연결
 const connect = require('./models/connectDB');
@@ -35,6 +36,16 @@ app.use('/insta/board', instaBoardRouter);
 
 app.get('/', (req, res) => {
     res.send('Hello World');
+});
+
+app.get('/insta/check', verifyRouter, (req, res) => {
+    return res.status(200).send({
+        result: 'success',
+        id: res.locals._id,
+        email: res.locals.email,
+        nickName: res.locals.nickName,
+        userName: res.locals.userName,
+    });
 });
 
 app.listen(port, () => {
