@@ -11,19 +11,18 @@
 <br/>
 <br/>
 
-🤔 Team
--------------  
-[Front-End] [김병훈](https://github.com/kbyunghoon), [김형민](https://github.com/rlagudals95)  
-[Back-End] 원동균, [이재윤](https://github.com/Leejaeyoon94)  
-
-<br/>
-<br/>
-
 로그인, 회원가입, 메인화면, 글쓰기, 프로필, 좋아요 기능이 구현된 인스타그램 클론 코딩입니다.  
 
 Instagram Clone Cording Project  
 use  node js, mongoose and React  
 
+<br/>
+<br/>
+
+🤔 Team
+-------------  
+[Front-End] [김병훈](https://github.com/kbyunghoon), [김형민](https://github.com/rlagudals95)  
+[Back-End] 원동균, [이재윤](https://github.com/Leejaeyoon94)  
 
 <br/>
 <br/>
