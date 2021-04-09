@@ -166,6 +166,17 @@ instagram_clonCording
 <br/>
 <br/>
 
+🤭 API
+-----------------
+
+<br/>
+<br/>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/52685665/114117529-e03d0d00-9921-11eb-9d18-ffa195f36449.png"></p>
+
+<br/>
+<br/>
+
 🤭 multer와 AWS 사용하기
 -----------------
 
