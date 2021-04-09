@@ -148,7 +148,16 @@ instagram_clonCording
 <br/>
 <br/>
 
+🤭 Instagram Clone Cording ERD
+-----------------
 
+<br/>
+<br/>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/52685665/114116695-15486000-9920-11eb-834b-ac8d6e3bef70.png"></p>
+
+<br/>
+<br/>
 
 🤭 multer와 AWS 사용하기
 -----------------
