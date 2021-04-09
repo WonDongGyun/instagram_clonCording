@@ -157,6 +157,7 @@ instagram_clonCording
 <br/>
 
 multer를 사용하여 Amazon S3에 이미지를 업로드할 수 있습니다.  
+이미지 같은 경우는 용량도 크니, 아무래도 Amazon에서 빌리는 편이 더 좋겠죠?  
 
 단, 이미 Amazon S3 bucket이 만들어진 상태여야 하고  
 미리 awsconfig.json에 aws 키값을 받아서 입력해야 합니다.  
