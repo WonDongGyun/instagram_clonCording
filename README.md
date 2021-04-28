@@ -191,6 +191,12 @@ multer를 사용하여 Amazon S3에 이미지를 업로드할 수 있습니다.
 
 물론, 저는 노출 방지를 위해서 내용을 빼놨습니다.  
 
+프론트에서 데이터를 받기 위해서는 프론트 header에서 'Content-Type': 'multipart/form-data'를 설정해주셔야 합니다.  
+그렇지 않으면 null로 반환됩니다!  
+
+예전에는 회원 로그인 토큰값을 body에 담아서 받았는데, multipart/form-data의 경우 body값을 제대로 불러올 수 없습니다.  
+따라서 header에 담아서 토큰값을 보냈습니다.  
+
 <p align="center"><img src="https://user-images.githubusercontent.com/52685665/114110890-8af9ff00-9913-11eb-98e6-97c4e743b9f0.png"></p>
 
 <br/>
